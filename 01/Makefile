@@ -1,4 +1,4 @@
-all: alarm alarm_fork alarm_thread
+all: alarm alarm_fork alarm_thread thread_error
 
 alarm:
 	gcc -Wall -I../common -o alarm alarm.c
@@ -9,5 +9,8 @@ alarm_fork:
 alarm_thread:
 	gcc -Wall -I../common -pthread -o alarm_thread alarm_thread.c
 
+thread_error:
+	gcc -Wall -I../common -pthread -o thread_error thread_error.c
+
 clean:
-	rm alarm alarm_fork alarm_thread
+	rm alarm alarm_fork alarm_thread thread_error
