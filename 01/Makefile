@@ -10,7 +10,7 @@ alarm_thread:
 	gcc -Wall -I../common -pthread -o alarm_thread alarm_thread.c
 
 thread_error:
-	gcc -Wall -I../common -pthread -o thread_error thread_error.c
+	gcc -Wall -pthread -o thread_error thread_error.c
 
 clean:
 	rm -f alarm alarm_fork alarm_thread thread_error
