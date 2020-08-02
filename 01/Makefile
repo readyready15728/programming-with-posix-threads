@@ -13,4 +13,4 @@ thread_error:
 	gcc -Wall -I../common -pthread -o thread_error thread_error.c
 
 clean:
-	rm alarm alarm_fork alarm_thread thread_error
+	rm -f alarm alarm_fork alarm_thread thread_error
