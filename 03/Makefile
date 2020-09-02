@@ -1,4 +1,4 @@
-all: mutex_static mutex_dynamic alarm_mutex trylock backoff
+all: mutex_static mutex_dynamic alarm_mutex trylock backoff cond
 
 mutex_static:
 	gcc -Wall -I../common -pthread -o mutex_static mutex_static.c
@@ -15,5 +15,8 @@ trylock:
 backoff:
 	gcc -Wall -I../common -DDEBUG -pthread -o backoff backoff.c
 
+cond:
+	gcc -Wall -I../common -pthread -o cond cond.c
+
 clean:
-	rm -f mutex_static mutex_dynamic alarm_mutex trylock backoff
+	rm -f mutex_static mutex_dynamic alarm_mutex trylock backoff cond
